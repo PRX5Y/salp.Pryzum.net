@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SALP.Pryzum.net">
+  <meta name="keywords" content="SALP, Purple RP, Nopixel, fictional site">
+  <meta name="author" content="Prx5y">
+  <meta property="og:title" content="SALP.Pryzum.net">
+  <meta property="og:description" content="Pryzum.net">
+  <meta property="og:image" content="https://femboy.beauty/_sF2x">
+  <meta property="og:url" content="https://pryzum.net">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SALP.Pryzum.net">
+  <meta name="twitter:description" content="SALP.Pryzum.net">
+  <meta name="twitter:image" content="https://femboy.beauty/_sF2x">
+  <title>S.A.L.P</title>
+  <link rel="icon" type="image/x-icon" href="./media/Images/red rose.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="./mainpage.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700&family=Nunito+Sans:wght@200;400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap">
+  <style>
+    .hidden { 
+      opacity: 0;
+      transform: scale(0.5); /* Start with a smaller scale */
+    }
+
+    .pop-in {
+      animation: popIn 0.5s forwards;
+    }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: scale(1); /* Scale to full size */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor">
+    <div id="cursor">
+      <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+        <g>
+         <rect id="canvas_background" height="32" width="32" y="-1" x="-1"/>
+         <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+          <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+         </g>
+        </g>
+        <g>
+         <g stroke="null" id="svg_4">
+          <rect stroke="#000" id="svg_1" height="30.08503" width="29.97745" y="-0.0771" x="0.00746" stroke-width="0" fill="#6ef0fd"/>
+          <rect stroke="#000" id="svg_3" height="24.06803" width="24.08055" y="2.93141" x="2.94642" stroke-width="0" fill="#15111f"/>
+         </g>
+         <rect stroke="#6ef0fd" id="svg_5" height="3.06595" width="12.10406" y="12.72462" x="8.72043" stroke-width="0.5" fill="#011115"/>
+        </g>
+       </svg>
+    </div>
+  </div>
+  <!-- Loading screen -->
+  <div id="loadingScreen">
+    <video autoplay muted loop>
+      <source src="./media/backgroundvideo2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h1 id="loadingText">Loading...</h1>
+    <div id="loadingBar"></div>
+    <img id="loadingImage" src="./media/Images/red rose.png" width="25" height="25" alt="Loading Image" style="display: none; width: 85px; height: 85px;">
+  </div>
+
+  <div class="noise"></div>
+  <div class="overlay"></div>
+  <div id="border">
+    <wrapper>
+      <scroller id="scroller"></scroller>
+    </wrapper>
+    <scrollbar></scrollbar>
+  </div>
+  <div id="imageContainer"></div>
+  <div id="Members login">
+    
+    <div style="position: absolute; top: 25px; right: 75px; font-size: 12px; font-family: 'Rajdhani', sans-serif; color: #ffffff;z-index: 1001;">
+      Toggle Full Screen
+    </div>
+    <div style="position: absolute; top: 25px; right: 220px; font-size: 12px; font-family: 'Rajdhani', sans-serif; color: #E14E47;">
+       This Site is Best Viewed in Fullscreen
+    </div>
+    <div style="position: absolute; top: 25px; right: 420px; font-size: 12px; font-family: 'Rajdhani', sans-serif; color: #E14E47;">
+      &uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B A
+   </div>
+
+    <button class="cybr-btn df-btn" id="fullscreenButton" style="position: absolute; top: 20px; right: 35px; font-size: 12px; height: 20px; width: 170px; text-align: center; padding-top: -10px;">
+      <span aria-hidden>_</span>
+      <span aria-hidden class="cybr-btn__glitch">Full Screen_</span>
+    </button>
+
+    <p class="cyberpunk inverse dotted">
+      <span class="scrolling-text">WELCOME TO THE OFFICIAL WEBSITE FOR THE SAN ANDREAS LABOUR PARTY•WELCOME TO THE OFFICIAL WEBSITE FOR THE SAN ANDREAS LABOUR PARTY•WELCOME TO THE OFFICIAL WEBSITE FOR THE SAN ANDREAS LABOUR PARTY•WELCOME TO THE OFFICIAL WEBSITE FOR THE SAN ANDREAS LABOUR PARTY•WELCOME TO THE OFFICIAL WEBSITE FOR THE SAN ANDREAS LABOUR PARTY•WELCOME TO THE OFFICIAL WEBSITE FOR THE SAN ANDREAS LABOUR PARTY•</span>
+    </p>
+
+    <div class="profile-shrinker">
+      <div class="card-group hidden">
+        <div class="side" style="height: 316px;"></div>
+        <div class="card" style="height: 312px;">
+          <div class="top">
+            <div class="top-title">
+              <span class="icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></span>
+              <span class="text"><p>ATTENTION</p></span>
+            </div>
+            <div class="top-r-icon">
+              <div class="icon">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>            </div>
+            </div>
+          </div>
+          <div class="card-inner">
+            <div class="data-banner clipped">
+              <div class="banner-text-main">
+                <span class="h2-cyber-banner"><h2>ABOUT KENZIE:</h2></span>
+              </div>
+            </div>
+            <div class="data-banner-body">
+              <p>Kenzie is the leader Of the San Andreas Labour party, and also a very active member of San Andreas's Music Seen who has releaced multiple albums and singles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="imagecontainer" style="top: calc(415px + 10px);" class="hidden">
+        <div id="wrapper">
+        <div id="blurbContainer">
+          <span style="color: #E14E47;">MEET S.A.L.P</span>
+          <span style="color: #E14E47;" id="acr">ATA CGD CSAPGM LDD WZF ATA CGD CSAPGM LDD WZFATA CGD CSAPGM LDD WZF</span>
+        </div>
+        <span style="color: #E14E47;" id="textOuter">MEET OUR STAFF</span>
+        <div id="modal">
+          <span style="color: #E14E47;" id="textInner">Lucy</span>
+          <div id="inner" style="background: url('https://femboy.beauty/h8y_O.PNG') no-repeat center center; background-size: cover;">
+          </div>
+        </div>
+        <span id="extra"></span>
+          </div>
+      </div>
+
+      <div class="card-group hidden" style="top: calc(415px + 10px);">
+        <div class="side" style="height: 372px;"></div>
+        <div class="card" style="height: 368px;">
+          <div class="top">
+            <div class="top-title">
+              <span class="icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></span>
+              <span class="text"><p>ATTENTION</p></span>
+            </div>
+            <div class="top-r-icon">
+              <div class="icon">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>            </div>
+            </div>
+          </div>
+          <div class="card-inner">
+            <!-- <div class="data-banner">
+              <div class="banner-text-main">
+                <img src="">
+              </div>
+            </div> -->
+            <div class="data-banner clipped">
+              <div class="banner-text-main">
+                <span class="h2-cyber-banner"><h2>ABOUT LUCY:</h2></span>
+              </div>
+            </div>
+            <div class="data-banner-body">
+              <p>Lucy Is the Lead Website designer for S.A.L.P who has a keen interest in Cyberpunk artstyles, she is also a former Medical Pracitoner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group hidden" style=" right: 770px; top: 45px;">
+        <div class="side" style="height: 1072px;"></div>
+        <div class="card" style="height: 1068px; width: 1100px;">
+          <div class="top"> 
+            <div class="top-title">
+              <span class="icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></span>
+              <span class="text"><p>ATTENTION</p></span>
+            </div>
+            <div class="top-r-icon">
+              <div class="icon">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>            </div>
+            </div>
+          </div>
+          <div class="card-inner">
+            <div class="data-banner clipped">
+              <div class="banner-text-main">
+                <span class="h2-cyber-banner"><h2>OUR POLICYS:</h2></span>
+              </div>
+            </div>
+            <div class="data-banner-body">
+              <p>blah blah blah</p>
+            </div>
+            <div class="data-banner clipped">
+              <div class="banner-text-main">
+                <span class="h2-cyber-banner"><h2>Labour Employment Laws:</h2></span>
+              </div>
+            </div>
+            <div class="data-banner-body">
+              <p>blah blah blah</p>
+            </div>
+            <div class="data-banner clipped">
+              <div class="banner-text-main">
+                <span class="h2-cyber-banner"><h2>Re-wrighting Laws to Ensure Freedom of Protest:</h2></span>
+              </div>
+            </div>
+            <div class="data-banner-body">
+              <p>blah blah blah</p>
+            </div>
+            <div class="data-banner clipped">
+              <div class="banner-text-main">
+                <span class="h2-cyber-banner"><h2>Introduction of Human Rights laws:</h2></span>
+              </div>
+            </div>
+            <div class="data-banner-body">
+              <p>blah blah blah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="imagecontainer" class="hidden">
+        <div id="wrapper">
+          <div id="blurbContainer">
+            <span style="color: #E14E47;">MEET S.A.L.P</span>
+            <span style="color: #E14E47;" id="acr">ATA CGD CSAPGM LDD WZF ATA CGD CSAPGM LDD WZFATA CGD CSAPGM LDD WZF</span>
+          </div>
+          <span style="color: #E14E47;" id="textOuter">MEET OUR STAFF</span>
+          <div id="modal">
+            <span style="color: #E14E47;" id="textInner">Kenzie</span>
+            <div id="inner" style="background: url('https://femboy.beauty/VohbE.PNG') no-repeat center center; background-size: cover;">
+            </div>
+          </div>
+        <span id="extra"></span>
+          </div>
+      </div>
+    </div>
+    <div class="popupbackground" id="popupbackground">
+      <div class="card popup">
+        <div class="top">
+          <div class="top-title">
+            <span class="icon"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></span>
+            <span class="text"><p>ATTENTION</p></span>
+          </div>
+          <div class="top-r-icon">
+            <div class="icon">
+              <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-inner">
+          <div class="data-banner clipped">
+            <div class="banner-text-main">
+              <span class="h2-cyber-banner"><h2>This Site is a Work of Fiction</h2></span>
+            </div>
+          </div>
+          <div class="data-banner-body">
+            <span style="font-size: 16px;">This site is not related to any real world groups or individuals,<span class="errorcode"> This site is best viewed in full screen</span class="errorcode"><br>!All content on this site is intended to be used for<br>the FiveM server Purple RP, <br><span class="errorcode">Site made by @LoopyTheWebz on Twitch</span class="errorcode"></span><br><button class="password-input" id="closePopup">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="terminal">
+      <img src="./media/Images/red rose.png" width="100" height="100" alt="SALP"><h1>San Andreas Labour Party</h1>
+    </div>
+  </div>
+
+  <div id="hidden-login" class="hidden-login" style="z-index: 90;">
+    <div class="password-container">
+      <input type="password" id="password" class="password-input" placeholder="Enter Key">
+      <button class="cybr-btn df-btn" onclick="checklogincreds()">
+        Submit
+        <span aria-hidden>_</span>
+        <span aria-hidden class="cybr-btn__glitch">Submit_</span>
+        <span aria-hidden class="cybr-btn__tag">R25</span>
+      </button>
+    </div>
+  </div>
+  <!-- Hidden container for preloading images -->
+  <div id="preloadContainer" style="display: none;"></div>
+
+  <div class="small-text">this site is not related to any real world groups or individuals<br>this site is all in character &lt;3 <img width="24" height="24" src="./media/Images/peepo-blush.gif"></div> 
+  <div class="small-text-right">Site Made by Prx5y :3</div><img class="small-text-right-image" src="./media/Images/Transgender-Flag-Emoji.png" width="24" height="24" alt="Transflag">
+  <img class="hacked-image" src="./media/Images/hacked.png" width="600" height="75">
+  <script src="./js/PRPMenu.js"></script>
+  <script src="./js/NPMenu.js"></script> 
+  <script src="./EasterEgg.js"></script> 
+  <script src="./cyberpunk-image-animation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+    const closePopupButton = document.getElementById('closePopup');
+    const popupbackground = document.getElementById('popupbackground');
+    const popup = document.querySelector('.popup');
+    const profileShrinker = document.querySelector('.profile-shrinker');
+    const imageContainer = document.getElementById('imageContainer');
+  
+    closePopupButton.addEventListener('click', () => {
+      popupbackground.classList.remove('show'); // Hide the popup
+  
+      // Trigger the banner animation
+      const banner = document.querySelector('.cyberpunk.inverse.dotted');
+      banner.classList.add('expand');
+  
+      // Fade in elements in profile-shrinker one by one
+      const profileChildren = profileShrinker.querySelectorAll('.hidden');
+      for (let i = 0; i < profileChildren.length; i++) {
+        setTimeout(() => {
+          profileChildren[i].classList.remove('hidden');
+          profileChildren[i].classList.add('fade-in');
+          profileChildren[i].style.opacity = '1'; // Ensure opacity is set to 1
+        }, i * 500); // Adjust the delay as needed
+      }
+  
+      // Fade in elements in imageContainer one by one
+      const imageChildren = imageContainer.querySelectorAll('.hidden');
+      for (let i = 0; i < imageChildren.length; i++) {
+        setTimeout(() => {
+          imageChildren[i].classList.remove('hidden');
+          imageChildren[i].classList.add('fade-in');
+          imageChildren[i].style.opacity = '1'; // Ensure opacity is set to 1
+        }, (profileChildren.length + i) * 500); // Adjust the delay as needed
+      }
+    });
+  
+    // Function to change the loading text and handle the fade effect
+    function changeLoadingText(text, delay) {
+      return new Promise((resolve) => {
+        const loadingText = document.getElementById('loadingText');
+        const loadingImage = document.getElementById('loadingImage');
+        const loadingBar = document.getElementById('loadingBar');
+        loadingText.style.opacity = '0';
+        loadingImage.style.opacity = '0';
+        setTimeout(() => {
+          if (text === 'image') {
+            loadingText.style.display = 'none';
+            loadingImage.style.display = 'block';
+            loadingImage.style.animation = 'fadeIn 1s forwards';
+          } else {
+            loadingText.style.display = 'block';
+            loadingImage.style.display = 'none';
+            loadingText.textContent = text;
+            loadingText.style.opacity = '1';
+          }
+          setTimeout(() => {
+            resolve();
+          }, delay);
+        }, 1000); // Match this duration with the CSS transition duration
+      });
+    }
+  
+    // Sequence of text changes
+    async function runLoadingSequence() {
+      await changeLoadingText('Join', 2000);
+      await changeLoadingText('The', 2000);
+      await changeLoadingText('Revolution', 2000);
+      const loadingBar = document.getElementById('loadingBar');
+      loadingBar.style.opacity = '1';
+      loadingBar.style.width = '100%';
+      await new Promise(resolve => setTimeout(resolve, 4000));
+      setTimeout(() => {
+        const loadingImage = document.getElementById('loadingImage');
+        loadingImage.style.animation = 'fadeIn 1s forwards';
+      }, 500); // Delay the image appearance by 0.5 seconds
+      await changeLoadingText('image', 100); // Show the image
+      setTimeout(() => {
+        const loadingScreen = document.getElementById('loadingScreen');
+        loadingScreen.style.opacity = '0';
+        const video = document.querySelector('#loadingScreen video');
+        video.style.filter = 'blur(0)'; // Remove blur effect
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+          // Show the popup after the loading screen is fully finished
+          popupbackground.classList.add('show');
+          popup.classList.add('show');
+        }, 1000); // Match this duration with the CSS transition duration
+      }, 2000); // Delay the loading screen fade out by 2 seconds
+    }
+  
+    // Start the loading sequence
+    runLoadingSequence();
+  
+    //----------Cyberpunk Cursor----------//
+    const $cursor = document.querySelector('#cursor');
+  
+    // Cursor Listeners
+    document.body.addEventListener('mousemove', onMouseMove);
+    // Move cursor
+    function onMouseMove(e) {
+      gsap.to($cursor, { duration: 0.1, x: e.pageX - 15, y: e.pageY - 15 });
+    }
+    // JavaScript to handle full screen toggle
+    const fullscreenButton = document.getElementById('fullscreenButton');
+  
+    fullscreenButton.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
