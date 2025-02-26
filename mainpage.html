@@ -36,6 +36,19 @@
         transform: scale(1); /* Scale to full size */
       }
     }
+    .bottom-right-gif {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      transform: scaleX(-1); /* Flip the image horizontally */
+      z-index: 1000; /* Ensure it is on top of other elements */
+    }
+    .bottom-left-gif {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 1000; /* Ensure it is on top of other elements */
+    }
   </style>
 </head>
 
@@ -87,9 +100,9 @@
     <div style="position: absolute; top: 25px; right: 220px; font-size: 12px; font-family: 'Rajdhani', sans-serif; color: #E14E47;">
        This Site is Best Viewed in Fullscreen
     </div>
-    <!-- <div style="position: absolute; top: 25px; right: 420px; font-size: 12px; font-family: 'Rajdhani', sans-serif; color: #E14E47;">
+    <div style="position: absolute; top: 25px; right: 420px; font-size: 12px; font-family: 'Rajdhani', sans-serif; color: #E14E47;">
       &uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B A
-   </div> -->
+    </div> 
 
     <button class="cybr-btn df-btn" id="fullscreenButton" style="position: absolute; top: 20px; right: 35px; font-size: 12px; height: 20px; width: 170px; text-align: center; padding-top: -10px;">
       <span aria-hidden>_</span>
@@ -255,16 +268,11 @@
     </div>
   </div>
 
-  <div id="hidden-login" class="hidden-login" style="z-index: 90;">
-    <div class="password-container">
-      <input type="password" id="password" class="password-input" placeholder="Enter Key">
-      <button class="cybr-btn df-btn" onclick="checklogincreds()">
-        Submit
-        <span aria-hidden>_</span>
-        <span aria-hidden class="cybr-btn__glitch">Submit_</span>
-        <span aria-hidden class="cybr-btn__tag">R25</span>
-      </button>
-    </div>
+  <div id="hidden-login" class="hidden-login" style="z-index: 90; display: flex; flex-direction: column; align-items: center; width: 100vw; text-align: center; margin: 50px 0; margin-top: -10px; position: relative;">
+    <h1 style="margin-top: 20px;">🎵🎶"There's a McDonald's in the Pentagon,<br>I work at the McDonald's in the Pentagon"🎶🎵</h1>
+    <img src="./media/Images/cat-spin.gif" alt="Kitty" style="margin-top: 20px;">
+    <img src="./media/Images/so-cute-peepo.gif" alt="So Cute Peepo" class="bottom-right-gif">
+    <img src="./media/Images/peepo-goose.gif" alt="Peepo Goose" class="bottom-left-gif" height="250px" width="250px">
   </div>
   <!-- Hidden container for preloading images -->
   <div id="preloadContainer" style="display: none;"></div>

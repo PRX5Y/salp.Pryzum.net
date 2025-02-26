@@ -42,4 +42,9 @@ function activateKonamiCode() {
             hiddenLogin.classList.add('show');
         }, 10);
     }, 1000); // Match this duration with the fade-out transition duration
+
+    // Play the MP3 file and loop it
+    const audio = new Audio('./media/MCDATP.mp3');
+    audio.loop = true;
+    audio.play();
 }
